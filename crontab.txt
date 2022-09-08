@@ -1,1 +1,3 @@
-*/1 * * * * python3 /opt/app/losers.py >> /var/log/losers.log
+10 * * * * python3 /opt/app/losers.py >> /var/log/losers.log
+10 * * * * python3 /opt/app/winners.py >> /var/log/winners.log
+12 * * * * python3 /opt/app/analyze.py >> /var/log/analyze.log
