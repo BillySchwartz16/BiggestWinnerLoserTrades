@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import pandas as pd
 import json
 
-req = requests.get("https://finance.yahoo.com/losers/")
+req = requests.get("https://finance.yahoo.com/gainers/")
 
 soup = BeautifulSoup(req.text, 'lxml')
 soup
@@ -35,5 +35,16 @@ for stock in parsed['data']:
     
 print(buys)
     
-with open('/data/buys.json', 'w') as fp:
+with open('/data/winnerbuys.json', 'w') as fp:
     json.dump(buys, fp)
+    
+totalshares = {}
+totalcost = 0.0
+for k,v in buys.items():
+    totalshares[k] = {"cost":str(float(v) * 100), "shares":100}
+for k,v in totalshares.items():
+    totalcost += float(v["cost"])
+totalshares["totalcost"] = totalcost
+    
+with open('/data/winnershares.json', 'w') as fp:
+    json.dump(totalshares, fp)
