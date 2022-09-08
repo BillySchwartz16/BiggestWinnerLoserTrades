@@ -1,0 +1,10 @@
+
+    Biggest losers yesterday had $7.180000000000291 dollars
+    
+    {'GSAT': 0.0, 'BILI': 0.0, 'BGAOF': 0.0, 'SABR': 0.0, 'TWODF': 0.0, 'VRNT': 0.0, 'ASBFY': 0.0, 'DQ': 0.0, 'AMR': 0.0, 'CDEV': 0.0, 'ANGPY': 0.0, 'CEIX': 0.0, 'SNMRF': 0.0, 'HOKCF': 0.0, 'CSIQ': 0.0, 'AMSYF': 0.18000000000029104, 'MKC': 0.0, 'STOHF': 0.0, 'JXHGF': 0.0, 'ZLAB': 0.0, 'CXMSF': 0.0, 'TIIAY': 7.0, 'BMRRY': 0.0, 'JSAIY': 0.0, 'ELAN': 0.0}
+    
+    Biggest winners yesterday had $0.0 dollars
+
+    {'WMNNF': 0.0, 'HPIFY': 0.0, 'LFST': 0.0, 'ASAN': 0.0, 'RLAY': 0.0, 'OCPNY': 0.0, 'REGN': 0.0, 'ISEE': 0.0, 'LYFT': 0.0, 'TNDM': 0.0, 'IMCR': 0.0, 'AVAV': 0.0, 'PRCT': 0.0, 'RIVN': 0.0, 'WLY': 0.0, 'NXE': 0.0, 'ASND': 0.0, 'DNA': 0.0, 'SNAP': 0.0, 'MNDY': 0.0, 'CANO': 0.0, 'ALNY': 0.0, 'PILBF': 0.0, 'FQVLF': 0.0, 'LAC': 0.0}
+    
+   Biggest losers had a better day with 7.180000000000291 dollars 

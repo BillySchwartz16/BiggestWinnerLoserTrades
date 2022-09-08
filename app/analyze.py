@@ -5,11 +5,11 @@ import json
 msft = yf.Ticker("MSFT")
 
 
-f = open("./data/winnershares.json", "r")
+f = open("/data/winnershares.json", "r")
 
 winners = json.load(f)
 
-read = open("./data/losershares.json", "r")
+read = open("/data/losershares.json", "r")
 
 losers = json.load(read)
 
