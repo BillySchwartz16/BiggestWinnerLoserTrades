@@ -1,3 +1,0 @@
-0 9 * * 1-5 python3 /opt/app/losers.py >> /var/log/losers.log
-0 9 * * 1-5 python3 /opt/app/winners.py >> /var/log/winners.log
-15 4 * * 1-5 python3 /opt/app/analyze.py >> /var/log/analyze.log
