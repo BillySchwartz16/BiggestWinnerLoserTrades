@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+requests
+BeautifulSoup4
+pandas
+pymongo
+lxml

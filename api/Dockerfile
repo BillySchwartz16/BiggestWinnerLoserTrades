@@ -1,13 +1,25 @@
+#
 FROM python:3.9
 
-RUN mkdir /app
+#
+WORKDIR /code
 
-WORKDIR /app
+#
+COPY ./requirements.txt /code/requirements.txt
 
-COPY src /app
+#
+RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
+RUN apt-get update && apt-get install -y cron
 
-RUN pip install -r requirements.txt
 
-EXPOSE 8000
 
-CMD ["uvicorn", "main:app", "--reload"]
+
+#
+COPY ./src /code/src
+
+
+WORKDIR /code/src
+
+
+#
+CMD ["uvicorn", "main:app", "--reload","--host", "0.0.0.0", "--port", "80"]

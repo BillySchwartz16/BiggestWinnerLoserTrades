@@ -11,7 +11,7 @@ services:
       context: api
       dockerfile: Dockerfile
     ports:
-      - "8000:8000"
+      - "80:80"
     depends_on:
       - mongodb
     environment:
@@ -25,5 +25,9 @@ services:
       - "3000:3000"
     depends_on:
       - api
+  cron:
+    build:
+      context: cron
+      dockerfile: Dockerfile
 volumes:
   mongodb:
