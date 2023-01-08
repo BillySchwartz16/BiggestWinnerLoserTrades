@@ -30,6 +30,7 @@ jobs:
     - name: Create pull request
       uses: peter-evans/create-pull-request@v3
       with:
+        base: main
         commit-message: Add new feature
         title: New feature
         body: This pull request adds a new feature
