@@ -1,4 +1,4 @@
-name: update
+name: addinstance
 
 on: [workflow_dispatch]
 
