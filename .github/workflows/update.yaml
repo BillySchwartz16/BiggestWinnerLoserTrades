@@ -35,6 +35,5 @@ jobs:
         title: New feature
         body: This pull request adds a new feature
         branch: new-branch
-        reviewers: octocat
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
