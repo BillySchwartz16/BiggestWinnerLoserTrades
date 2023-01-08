@@ -22,7 +22,7 @@ jobs:
         export instance_name=${{ env.instance_name }}
         python script.py
       env:
-        instance_name: ${{ env.instance_name }}
+        instance_name: ${{ inputs.instance_name }}
     - name: Push new branch
       run: |
         git push origin new-branch
