@@ -8,7 +8,8 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with:
-        ref: refresh
+        ref: main
+        instance_name: ${{ inputs.instance_name }}
     - name: Create new branch
       run: |
         git checkout -b new-branch
@@ -17,8 +18,6 @@ jobs:
         python script.py
       env:
         instance_name: ${{ env.instance_name }}
-      with:
-        instance_name: ${{ inputs.instance_name }}
     - name: Push new branch
       run: |
         git push origin new-branch
