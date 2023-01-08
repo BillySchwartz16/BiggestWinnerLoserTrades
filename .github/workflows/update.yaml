@@ -19,6 +19,7 @@ jobs:
         git checkout -b new-branch
     - name: Run Python script
       run: |
+        export instance_name=${{ env.instance_name }}
         python script.py
       env:
         instance_name: ${{ env.instance_name }}
