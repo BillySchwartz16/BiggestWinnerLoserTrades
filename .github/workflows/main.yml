@@ -1,0 +1,41 @@
+name: update
+
+on: [workflow_dispatch]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        ref: refresh
+    - name: Create new branch
+      run: |
+        git checkout -b new-branch
+    - name: Run Python script
+      run: |
+        python script.py
+      env:
+        instance_name: ${{ env.instance_name }}
+      with:
+        instance_name: ${{ inputs.instance_name }}
+    - name: Push new branch
+      run: |
+        git push origin new-branch
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Create pull request
+      uses: peter-evans/create-pull-request@v3
+      with:
+        commit-message: Add new feature
+        title: New feature
+        body: This pull request adds a new feature
+        branch: new-branch
+        reviewers: octocat
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+inputs:
+  instance_name:
+    description: Name of the instance
+    required: true
